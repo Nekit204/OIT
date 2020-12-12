@@ -1,0 +1,137 @@
+<html>
+<head>
+<script type='text/javascript'>
+function number1()
+{
+var numbermax=0,numberrmin=0;
+var value1,value2,value3,value4,min,max;
+value1=Math.pow(Math.PI,2)+Math.pow(2.71,8);
+value2=2*Math.cos(4)+Math.cos(12)+8*Math.pow(2.71,3);
+value3=3*Math.sin(9)+Math.log10(5)+Math.sqrt(3);
+value4=2*Math.tan(5)+6*Math.PI+Math.sqrt(12);
+var array=[value1,value2,value3,value4];
+document.write(array+"<br>");
+min=array[0];
+max=array[0];
+for(var i=0; i<array.length; i++) 
+{
+if(array[i]>=max) 
+{
+max=array[i];
+numbermax=i;
+}
+if(array[i]<min) 
+{
+min=array[i];
+numbermin=i;
+}
+}
+document.writeln('Максимальное значение:<br> '+max);
+document.writeln('<br> Его номер: <br>'+( numbermax+1));
+document.writeln('<br>Минимальное значение: <br> '+min);
+document.writeln('<br> Его номер: <br>'+(numbermin+1));
+}
+function number2()
+{
+var arr=['pow','pop','push','shift','round', 'floor','sline','sort'];
+document.write("Исходный массив:",arr);
+mathMethods=[];
+arrayMethods=[];
+j = 0;
+k=0;
+for (var i=0;i<=7;i++) 
+{
+if(arr[i]=='pow'||arr[i]=='round'||arr[i]=='floor') 
+{
+mathMethods[k]=arr[i]; 
+k++;
+}
+else 
+{
+arrayMethods[j]=arr[i];
+j++;
+}
+}
+document.write("<br>")
+document.write("Массив методов Math:",mathMethods+"<br>");
+document.write("Массив методов Array:",arrayMethods+"<br>");
+newafter=mathMethods.push('sin');
+newbefor=arrayMethods.unshift('concat');
+document.write("Массив с добавленым методом Math:")
+for (var i=0;i<k+1;i++)
+{ 
+document.write(mathMethods[i] + ",");
+}   
+document.write("<br>");
+document.write("Массив с добавленым методом Array:")
+for (var i=0;i<j+1;i++)
+{ 
+document.write(arrayMethods[i] + ",");
+}
+document.write("<br>");
+Lenthfirst=arr.length;
+LenthSecond=mathMethods.length;
+LenthThird=arrayMethods.length;
+document.write("Длинна Первого массива: "+Lenthfirst+"<br>");
+document.write("Длинна Второго массива: "+ LenthSecond+"<br>");
+document.write("Длинна Третьего массива: "+LenthThird);
+}
+function number3(){
+mystring=new String('Закервашевич Никита Русланович');
+document.write("Строка:",mystring)
+document.write("<br>Длинна строки:"+mystring.length);
+document.write("<br>Верхний регистр:",mystring.toUpperCase());
+document.write("<br>Нижний регистр:",mystring.toLowerCase());
+document.write("<br>");
+str=mystring.toUpperCase();
+str2=mystring.toLowerCase();
+str1='Закервашевич Никита Русланович';
+document.write(str.concat(str2+"<br>"));
+document.write(str1.replace('Закервашевич Никита Русланович','З.Н.Р.'))
+}
+function number4() {
+date=new Date();
+error= parseInt(date.getMonth())+1;
+var t = '<table border=\"4px\" width=\"1000px\" align=\"center\" cellspacing=\"5px\" cellpadding=\"4px\">';
+t+= "<tr><td>Год</td><td>" + date.getFullYear(); "</td></tr>";
+t+= "<tr><td>Месяц</td><td>" +error+"</td></tr>";
+t+= "<tr><td>День</td><td>" + date.getDay(); "</td></tr>";
+t+= "<tr><td>Час</td><td>" + date.getHours(); "</td></tr>";
+t+= "<tr><td>Минута</td><td>" + date.getMinutes(); "</td></tr>";
+t+= "<tr><td>Секунда</td><td>" + date.getSeconds(); "</td></tr>";
+document.write(t + "</table>");
+}
+</script>
+<style>
+.flex-container {
+  display: flex;
+  flex-wrap: nowrap;
+width:100%;
+height:100%;
+background-image:url(ronaldo.jpg);
+  }
+.flex-items{
+  width: 100%;
+  height: 100%;
+}
+.but
+{
+background-image:url(real.png);
+color:aqua;
+border:double 5px red;
+width:200px;
+height:100px;
+margin-top:190px;
+}
+</style>
+</head>
+<body>
+<h1 align="center"> 3 лабораторная работа</h1>
+<div class="flex-container">
+<div class="flex-items"><input type='button' class="but" value='Задание 1' onclick='number1()'\><br></div>
+<div class="flex-items"><input type='button' class="but" value='Задание 2' onclick='number2()'\ ><br></div>
+<div class="flex-items"><input type='button' class="but" value='Задание 3' onclick='number3()'\ ><br></div>
+<div class="flex-items"><input type='button' class="but" value='Задание 4' onclick='number4()'\ ><br></div>
+</div>
+</body>
+</html>

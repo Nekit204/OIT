@@ -1,0 +1,16 @@
+body{
+    background-image: url(derevo.jpg);
+    background-size:  100%;
+    background-repeat: no-repeat;
+}
+.but
+{
+background:linear-gradient(to top,silver, grey);
+opacity:.8;
+margin-left:2px;
+margin-right:1000px; 
+padding-left:180px;
+color:white;
+font-size:25px;
+padding-right:50px;
+}

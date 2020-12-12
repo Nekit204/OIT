@@ -1,0 +1,75 @@
+<html>
+<head>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
+<style>
+#but2{
+margin-top:180px;
+}
+#but3{
+margin-top:230px;
+}
+#but4{
+margin-top:70px;
+}
+#img1{
+ position: absolute;
+    top: 480px; 
+}
+#one{  
+position: absolute;
+width: 100px;
+left: 50px;
+top: 710px; 
+}
+#two{  
+position: absolute;
+left: 50px;
+top: 930px; 
+width: 100px;
+} 
+#c1 {
+width: 400px;
+height: 200px;
+border: 3px solid black;
+margin-top: 300px;
+background-image:url(setka.png);
+}
+</style>
+</head>
+<body>
+<p id='lm'><span id="blink">Енот-полоскун</span>-<span id="km">xищное</span> <span id="tm">млекопитающее</span> рода <span id='blow'>еноты</span> семейства енотовых.</p>
+<img src="c++.png" width="200" height="200" id="lolik">
+<br>
+<br><img  src="java.jpg" width="200" height="200" id="fl">
+<div id='img1'><img src="Enot.png"  width='200px' height='150px' id='photo'></div>
+<img src="ch.png"  id='one' width='200px' height='150px'>
+<br>
+<img src="belka.png"  id='two' width='200px' height='150px'>
+<button id="but2"> Начать анимацию</button>
+<br>
+<button id="but3"> Начать анимацию</button>
+<br>
+<canvas id="c1" width=900px height=900px  ></canvas>
+<form name='frm'>
+<input type='radio' name='graph' value='1'\>y=sin(x)
+<br>
+<input type='radio' name='graph'  value='2'\>y=cos(x)
+<br>
+<input type='radio'name='graph'  value='3'\>y=x^2
+<br>
+<input type='radio' name='graph' value='4'\>y=x^3
+<br>
+<input id='draw' type='button' value='draw'><br>
+<input type='radio' name='col' value='1'\>pink
+<br>
+<input type='radio' name='col'  value='2'\>lime
+<br>
+<input type='radio'name='col'  value='3'\>red
+<br>
+<input type='radio' name='col' value='4'\>purple
+<br>
+</form>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+body{
+    background-image: url(derevo.jpg);
+    background-size:  100%;
+    background-repeat: no-repeat;
+}
+.menu-item
+{
+background:linear-gradient(to top,silver, grey);
+opacity:.8;
+height:30px;
+margin-left:2px;
+margin-right:1000px;
+margin-top:30px; 
+padding-left:180px;
+color:white;
+font-size:25px;
+}
+.menu-item2
+{
+background:linear-gradient(to top,silver, grey);
+opacity:.8;
+height:30px;
+margin-left:518px;
+margin-right:500px;
+margin-top:-30px; 
+padding-left:180px;
+color:white;
+font-size:25px;
+}
+.menu-item3
+{
+background:linear-gradient(to top,silver, grey);
+opacity:.8;
+height:30px;
+margin-left:1018px;
+margin-top:-30px; 
+padding-left:180px;
+color:white;
+font-size:25px;
+}
+.sp
+{
+background:linear-gradient(to top,silver, grey);
+opacity:.9;
+padding-right:135px;
+padding-left:150px;
+font-size:25px;
+}
+.sp1
+{
+background:linear-gradient(to top,silver, grey);
+opacity:.9;
+padding-right:123px;
+padding-left:150px;
+font-size:25px;
+}
+.sp2
+{
+background:linear-gradient(to top,silver, grey);
+opacity:.9;
+padding-right:124px;
+padding-left:150px;
+font-size:25px;
+}
+.submenu{
+margin-left:-150px;
+}
+a
+{
+color:white;
+text-decoration: none;
+}

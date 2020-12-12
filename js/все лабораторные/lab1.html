@@ -1,0 +1,123 @@
+<html>
+<head>
+<link rel="stylesheet" href="alllab.css">
+<script type='text/javascript'>
+/*------------------------------------------------------------------------------1 лабораторная работа------------------------------------------------------------------------------------*/
+function number1()
+{
+alert('Задание 1');
+alert('Вас приветствует учебный центр');
+nameuser=prompt('Введите имя:', 'Имя');
+alert('Добро пожаловть на наши курсы,'+ nameuser);
+if(confirm("Хотите стать Web-дизайнером?"))
+{
+alert('Учите стили Css и JS')
+}
+else
+{
+alert('Зря тратите время')
+};
+}
+function number2()
+{
+document.write("<body style='color:white;font-size:25px;background-image: url(derevo.jpg);background-size:100%;background-repeat: no-repeat;'>Задание 2<br>")
+var x=5,y=10,sum;
+sum=x+y;
+document.write(sum);
+var x="Я ",y=" хочу есть",sum2;
+sum2=x+y;
+document.write("<br>"+sum2);
+var x=5,y="Отлично",sum3;
+sum3=x+y;
+document.write("<br>"+sum3);
+var x="Яблоко",y=2,sum4;
+sum4=x+y;
+document.write("<br>"+sum4);
+alert('Результатом сложения строки и числа всегда будет ');
+alert('Строка');
+}
+function number3()
+{
+document.write("<br><body style='color:white;font-size:25px;background-image: url(derevo.jpg);background-size:100%;background-repeat: no-repeat;'> Задание 3")
+var x=5,y=5,expression;
+expression=(35*y-25*x)/5+232;
+document.write("<br>"+expression);
+var x=5,y=100,expression2;
+expression2=(8*y+8*x+6*y+6*x);
+document.write("<br>"+expression2);
+document.write("<br>"+expression2%expression);
+}
+function number4(){
+document.write("<br><body style='color:white;font-size:25px;background-image: url(derevo.jpg);background-size:100%;background-repeat: no-repeat;'> Задание 4")
+var x=45;
+if(x<20 || x>40 && x!=15 && x%5==0)
+{
+document.write("<br>Правильное значение")
+} 
+else
+{
+document.write("<br>Неправильное значение")
+}
+}
+function number5()
+{
+alert('задание 5')
+condition1=prompt('Введите число А','Число А');
+condition2=prompt('Введите число B','Число B');
+if(condition1>condition2)
+{
+alert('Число А больше В');
+}
+else if(condition1<condition2)
+{
+alert('Число B больше А');
+}
+else if(condition1==condition2)
+{
+alert('Числа равны ');
+}
+age=prompt('Вам больше 18?','Возраст');
+age>18?alert('Чекайте наш контент'):alert('Тебе сюда нельзя');
+}
+function number6(){
+alert('Задание 6')
+day=prompt('Введите число от 1 до 7','Число');
+switch(day)
+{
+case "1":alert("Понедельник");break;
+case "2":alert("Вторник");break;
+case "3":alert("Среда");break;
+case "4":alert("Четверг");break;
+case "5":alert("Пятница");break;
+case "6":alert("Суббота");break;
+case "7":alert("Воскресенье");break;
+default:alert("Нет таких значений");
+}
+}
+function number7()
+{
+try
+{
+alert('Здравствуйте');
+errorLol;
+alert('До меня не дойдет,летим в кеч')
+}
+catch(err)
+{
+alert('Ошибочка!')
+}
+} 
+</script>
+</head>
+<body>
+<h1 align="left"> 1 лабораторная работа</h1>
+<input type='button' class="but" value='Задание 1' onclick='number1()'\ ><br></div>
+<input type='button' class="but" value='Задание 2' onclick='number2()'\ ><br></div>
+<input type='button' class="but" value='Задание 3' onclick='number3()'\ ><br></div>
+<input type='button' class="but" value='Задание 4' onclick='number4()'\ ><br></div>
+<input type='button' class="but" value='Задание 5' onclick='number5()'\ ><br></div>
+<input type='button' class="but" value='Задание 6' onclick='number6()'\ ><br></div>
+<input type='button' class="but" value='Задание 7' onclick='number7()'\ ><br></div>
+</div>
+</body>
+</html>

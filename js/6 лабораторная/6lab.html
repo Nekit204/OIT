@@ -1,0 +1,84 @@
+<html>
+<head>
+<table>
+<script type='text/javascript'>
+function number1()
+{
+window.name="Имя окна!"
+win1=open()
+}
+function number2()
+{
+win1.close()
+}
+function number3()
+{
+window.name="Не имя окна!"
+win2=open()
+}
+function number4()
+{
+win2.close()
+}
+function number5()
+{
+win1.document.write('Hello world!'+" "+window.name)
+}
+function number6()
+{
+win2.document.write('Hello country!'+" "+window.name)
+}
+document.write("<br>Task 2<br>");
+document.write("<tr><td style='border:solid 1px black;width:400px;height:20px;text-align:center'>Свойство</td>");
+document.write("<td style='border:solid 1px black;width:400px;height:20px;text-align:center'>Значение</td>");
+document.write("</tr>");
+document.write("<tr><td style='border:solid 1px black;width:400px;height:20px;text-align:center'>1.userAgent</td>");
+document.write("<td style='border:solid 1px black;width:400px;height:20px;text-align:center'>"+navigator.userAgent+"</td>");
+document.write("</tr>");
+document.write("<tr><td style='border:solid 1px black;width:400px;height:20px;text-align:center'>2.appVersion</td>");
+document.write("<td style='border:solid 1px black;width:400px;height:20px;text-align:center'>"+navigator.appVersion+"</td>");
+document.write("</tr>");
+document.write("<tr><td style='border:solid 1px black;width:400px;height:20px;text-align:center'>3.appName</td>");
+document.write("<td style='border:solid 1px black;width:400px;height:20px;text-align:center'>"+navigator.appName+"</td>");
+document.write("</tr>");
+document.write("<tr><td style='border:solid 1px black;width:400px;height:20px;text-align:center'>4.appCodeName</td>");
+document.write("<td style='border:solid 1px black;width:400px;height:20px;text-align:center'>"+navigator.appCodeName+"</td>");
+document.write("</tr>");
+document.write("<tr><td style='border:solid 1px black;width:400px;height:20px;text-align:center'>5.platform</td>");
+document.write("<td style='border:solid 1px black;width:400px;height:20px;text-align:center'>"+navigator.platform+"</td>");
+document.write("</tr>");
+document.write("<tr><td style='border:solid 1px black;width:400px;height:20px;text-align:center'>6.Method:javaEnabled()</td>");
+document.write("<td style='border:solid 1px black;width:400px;height:20px;text-align:center'>"+navigator.javaEnabled()+"</td>");
+document.write("</tr>");
+document.write("<tr><td style='border:solid 1px black;width:400px;height:20px;text-align:center'>7.obj:Screen(width,height)</td>");
+document.write("<td style='border:solid 1px black;width:400px;height:20px;text-align:center'>"+screen.width+"x"+screen.height+"</td>");
+document.write("</tr>");
+document.write("<tr><td style='border:solid 1px black;width:400px;height:20px;text-align:center'>8.colorDepth</td>");
+document.write("<td style='border:solid 1px black;width:400px;height:20px;text-align:center'>"+screen.colorDepth+"</td>");
+document.write("</tr>");
+document.write("<tr><td style='border:solid 1px black;width:400px;height:20px;text-align:center'>9.obj:History(length)</td>");
+document.write("<td style='border:solid 1px black;width:400px;height:20px;text-align:center'>"+history.length+"</td>");
+document.write("</tr>");
+document.write("<tr><td style='border:solid 1px black;width:400px;height:20px;text-align:center'>10.obj:Location(href)</td>");
+document.write("<td style='border:solid 1px black;width:400px;height:20px;text-align:center'>"+location.href+"</td>");
+document.write("</tr>");
+document.write("<tr><td style='border:solid 1px black;width:400px;height:20px;text-align:center'>11.pathnam</td>");
+document.write("<td style='border:solid 1px black;width:400px;height:20px;text-align:center'>"+location.pathname+"</td>");
+document.write("</tr>");
+document.write("<tr><td style='border:solid 1px black;width:400px;height:20px;text-align:center'>12.host</td>");
+document.write("<td style='border:solid 1px black;width:400px;height:20px;text-align:center'>"+location.host+"</td>");
+document.write("</tr>");
+document.write("<br>")
+</script>
+</table>
+<body>
+<div >
+<div><input type='button'  value='Open first window' onclick='number1()'\><br></div>
+<div><input type='button' value='Close first window' onclick='number2()'\ ><br></div>
+<div><input type='button'  value='Open second window' onclick='number3()'\ ><br></div>
+<div><input type='button' value='Close second window' onclick='number4()'\ ><br></div>
+<div><input type='button' value='Text in first window' onclick='number5()'\ ><br></div>
+<div><input type='button'  value='Text in second window' onclick='number6()'\ ><br></div>
+</div>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<html>
+<head>
+<script type='text/javascript'>
+function number1(){
+function Gruppa(n,spec,kolich) {
+this.n=n;
+this.spec=spec;
+this.kolich=kolich;
+this.add_stud=function add_stud(k) {
+              this.kolich+=k;
+document.write('В группу ' + this.n + ' добавили '+ k + ' студентов.<br\>'); 
+}
+this.sub_stud=function sub_stud(k) {
+              this.kolich-=k;
+document.write('Из группы ' + this.n + ' исключили '+ k + ' студентов.<br\>'); 
+}
+}
+gr1=new Gruppa(2, 'ИСиТ ', 28);
+gr2=new Gruppa(6, 'ПОиБМС ', 22);
+gr3=new Gruppa(5, 'ПОИТ ', 29);
+gr4=new Gruppa(11, 'ДЭиВИ', 19);
+gr1.add_stud(2);
+gr1.sub_stud(5);
+gr2.add_stud(6);
+gr2.sub_stud(2);
+gr3.add_stud(1);
+gr3.sub_stud(3);
+gr4.add_stud(5);
+gr4.sub_stud(9);
+Gruppa.prototype.kurs=this.kurs
+gr1.kurs=2
+gr2.kurs=1
+gr3.kurs=3
+gr4.kurs=4
+document.write('Номер группы:'+gr1.n+'<br>Специальность:'+gr1.spec+'<br>Количество:'+ gr1.kolich+ '<br>Курс:'+ gr1.kurs)
+document.writeln('<br>Номер группы:'+gr2.n+'<br>Специальность:'+gr2.spec+'<br>Количество:'+ gr2.kolich+ '<br>Курс:'+ gr2.kurs)
+document.writeln('<br>Номер группы:'+gr3.n+'<br>Специальность:'+gr3.spec+'<br>Количество:'+ gr3.kolich+ '<br>Курс:'+ gr3.kurs)
+document.writeln('<br>Номер группы:'+gr4.n+'<br>Специальность:'+gr4.spec+'<br>Количество:'+ gr4.kolich+ '<br>Курс:'+ gr4.kurs+'<br>')
+document.write('kurs' in gr1)
+document.write("<br>")
+document.write(typeof gr1.kurs)
+}
+function number2()
+{
+function student(name,surname,math,mark1,phisics,mark2,IT,mark3)
+{
+this.name=name;
+this.surname=surname;
+this.math=math;
+this.mark1=mark1;
+this.phisics=phisics;
+this.mark2=mark2;
+this.IT=IT;
+this.mark3=mark3;
+}
+student1=new student('Олег','Петров','Математика:',9,'Физика:',8,'Информатика:',7);
+alert(student1.name+" "+student1.surname);
+student.prototype.scholarship=this.scholarships
+student1.scholarship=110
+document.write("Студент1:<br>")
+document.write("Имя:"+student1.name+"<br>","Фамилия:"+student1.surname+"<br>",student1.math,student1.mark1+"<br>",student1.phisics,student1.mark2+"<br>",student1.IT,student1.mark3+"<br>","Стипендия:"+student1.scholarship+"Byn")
+var average=((student1.mark1+student1.mark2+student1.mark3)/3);
+document.write("<br>Средний балл:"+average+"<br>")
+
+student2=new student('Иван','Филипов','Математика:',5,'Физика:',4,'Информатика:',8);
+alert(student2.name+" "+student2.surname);
+student.prototype.scholarship=this.scholarships
+student2.scholarship=50
+document.write("<br>Студент2:<br>")
+document.write("Имя:"+student2.name+"<br>","Фамилия:"+student2.surname+"<br>",student2.math,student2.mark1+"<br>",student2.phisics,student2.mark2+"<br>",student2.IT,student2.mark3+"<br>","Стипендия:"+student2.scholarship+"Byn")
+var average=((student2.mark1+student2.mark2+student2.mark3)/3);
+document.write("<br>Средний балл:"+average+"<br>")
+
+student3=new student('Ян','Лимпопов','Математика:',7,'Физика:',10,'Информатика:',5);
+alert(student3.name+" "+student3.surname);
+student.prototype.scholarship=this.scholarships
+student3.scholarship=70
+document.write("<br>Студент3:<br>")
+document.write("Имя:"+student3.name+"<br>","Фамилия:"+student3.surname+"<br>",student3.math,student3.mark1+"<br>",student3.phisics,student3.mark2+"<br>",student3.IT,student3.mark3+"<br>","Стипендия:"+student3.scholarship+"Byn")
+var average=((student3.mark1+student3.mark2+student3.mark3)/3);
+document.write("<br>Средний балл:"+average+"<br>")
+document.write('scholarship' in student2)
+document.write("<br>")
+document.write(typeof student2.scholarship)
+}
+function number3(){
+var el,el2,el3,el4;
+el1=Math.pow(Math.PI,2)+Math.pow(2.71,8);
+el2=2*Math.cos(4)+Math.cos(12)+8*Math.pow(2.71,3);
+el3=3*Math.sin(9)+Math.log10(5)+Math.sqrt(3);
+el4=2*Math.tan(5)+6*Math.PI+Math.sqrt(12);
+var array=[el1,el2,el3,el4];
+document.write(array+"<br>");
+delete array[3];
+document.write(array+"<br>")
+document.write(3 in array)
+document.write("<br>")
+document.write(array instanceof Array);
+document.write("<br>")
+document.write(array instanceof String);
+document.write("<br>")
+document.write(array instanceof Object);
+function five()
+{
+return 5;
+}
+document.write("<br>")
+document.write(typeof five())
+}
+</script>
+<style>
+.flex-container {
+  display: flex;
+  flex-wrap: nowrap;
+width:100%;
+height:100%;
+background-image:url(ronaldo.jpg);
+  }
+.flex-items{
+  width: 100%;
+  height: 100%;
+}
+.but
+{
+background-image:url(real.png);
+color:aqua;
+border:double 5px red;
+width:200px;
+height:100px;
+margin-top:190px;
+}
+</style>
+</head>
+<body>
+<h1 align="center"> 3 лабораторная работа</h1>
+<div class="flex-container">
+<div class="flex-items"><input type='button' class="but" value='Задание 1' onclick='number1()'\><br></div>
+<div class="flex-items"><input type='button' class="but" value='Задание 2' onclick='number2()'\ ><br></div>
+<div class="flex-items"><input type='button' class="but" value='Задание 3' onclick='number3()'\ ><br></div>
+</div>
+</body>
+</html>

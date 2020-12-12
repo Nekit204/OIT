@@ -1,0 +1,190 @@
+
+<html>
+<title>Animation</title>
+<head>
+<style>
+#but2{
+margin-top:-10px;
+}
+#but3{
+margin-top:-10px;
+}
+#but4{
+margin-top:70px;
+}
+#img1{
+ position: absolute;
+    left: 50px;
+    top: 50px; 
+}
+#one{  
+position: absolute;
+width: 100px;
+left: 50px;
+top: 350px; 
+}
+#two{  
+position: absolute;
+left: 50px;
+top: 500px; 
+width: 100px;
+} 
+#c1 {
+width: 400px;
+height: 200px;
+border: 3px solid black;
+margin-top: 150px;
+background-image:url(setka.png);
+}
+</style>
+<body>
+<div id='txt'>Первое задание</div>
+<div id='img1'><img src="Enot.png"  width='200px' height='150px' ></div>
+<img src="ch.png"  id='one'>
+<img src="belka.png"  id='two' >
+<h2 style="margin-top:250;">Второе задание</h2>
+<div><input type='button' id='but2' value='Start animation' onclick='number2()'\><br></div>
+<h2 style="margin-top:100;">Третье задание</h2>
+<div><input type='button' id='but3' value='Start animation' onclick='number3()'\><br></div>
+<canvas id="c1" width=900px height=900px  ></canvas>
+<form>
+<input type='radio' name='sin' value='1'onclick='number4()'\>y=sin(x)
+<br>
+<input type='radio' name='cos'  value='2'onclick='number5()'\>y=cos(x)
+<br>
+<input type='radio'name='x2'  value='3'onclick='number6()'\>y=x^2
+<br>
+<input type='radio' name='x3' value='4'onclick='number7()'\>y=x^3
+</form>
+<script>
+//------------------------------------------------------------------------
+var img=document.getElementById('img1');
+img.onmousedown = function(elem) {
+img.style.position = 'absolute';
+mv(elem);
+function mv(elem) {
+img.style.left = elem.pageX - img.offsetWidth / 2 + 'px';
+img.style.top = elem.pageY - img.offsetHeight / 2 + 'px';
+}
+document.onmousemove = function(elem) {
+mv(elem);
+}
+img.onmouseup = function() {
+document.onmousemove = null;
+}
+img.ondragstart = function() {
+return false;
+}
+}
+var txt=document.getElementById('txt');
+txt.onmousedown = function(elem) {
+txt.style.position = 'absolute';
+mv(elem);
+function mv(elem) {
+txt.style.left = elem.pageX - txt.offsetWidth / 2 + 'px';
+txt.style.top = elem.pageY - txt.offsetHeight / 2 + 'px';
+}
+document.onmousemove = function(elem) {
+mv(elem);
+}
+txt.onmouseup = function() {
+document.onmousemove = null;
+//txt.onmouseup = null;
+}
+txt.ondragstart = function() {
+return false;
+}
+}
+//--------------------------------------------------------
+
+
+function number2( ){
+var curPosX = 50; 
+var interval;  
+var n=5;
+interval = setInterval(move, 30); 
+function move() { 
+var img1 = document.getElementById("one"); 
+img1.style.left=(curPosX+=n)+'px';
+if (curPosX == 800)
+clearInterval(interval);
+} 
+}
+
+//---------------------------------------------------------
+
+function number3( ){
+var curPosX = 100; 
+var interval;  
+var n=5;
+interval = setInterval(move, 30); 
+function move() { 
+var img1 = document.getElementById("two"); 
+img1.style.left=(curPosX+=n)+'px';
+img1.style.top = Math.sin(curPosX/40)*50+500+'px';
+if (curPosX == 500){
+clearInterval(interval);
+interval2 = setInterval(moveBack, 50);
+}
+function moveBack(){
+img1.style.left = (curPosX -= n) + 'px';
+if (curPosX == 100)
+clearInterval(interval2);
+}
+} 
+}
+//----------------------------------------------------------
+function number4()
+{
+var canvas = document.getElementById('c1');
+var ctx = canvas.getContext('2d');
+var x = 0;
+var y=0;
+var timer;
+drawSin();
+function drawSin(){
+y = Math.sin(x);
+x=x+0.3;
+ctx.fillRect(15*x,430+80*y, 8,20);
+timer = setTimeout(drawSin, 2);
+}
+}
+function number5()
+{
+var canvas = document.getElementById('c1');
+var ctx = canvas.getContext('2d');
+var x = 0;
+var y=0;
+var timer;
+drawSin();
+function drawSin(){
+y = Math.cos(x);
+x=x+0.3;
+ctx.fillRect(15*x,430+80*y, 8,20);
+timer = setTimeout(drawSin, 2);
+}
+}
+function number6()
+{
+var canvas = document.getElementById('c1');
+var ctx = canvas.getContext('2d');
+for(let i=-40;i<40;i+=0.06){
+  setTimeout(function() {
+    ctx.fillRect(440+i*5,450-Math.pow(i,2),8,2);
+  }, 20);
+}
+}
+function number7()
+{
+var canvas = document.getElementById('c1');
+var ctx = canvas.getContext('2d');
+for(let i=-40;i<40;i+=0.02){
+  setTimeout(function() {
+    ctx.fillRect(440+i*5,450-Math.pow(i,3),2,8)
+  }, 20);
+}
+}
+
+</script>
+</body>
+</html>

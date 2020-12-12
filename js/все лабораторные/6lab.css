@@ -1,0 +1,61 @@
+body{
+    background-image: url(derevo.jpg);
+    background-size:  100%;
+    background-repeat: no-repeat;
+}
+.but
+{
+background:linear-gradient(to top,silver, grey);
+opacity:.8;
+margin-left:2px;
+margin-right:1000px; 
+padding-left:184px;
+color:white;
+font-size:25px;
+padding-right:50px;
+}
+.but1
+{
+background:linear-gradient(to top,silver, grey);
+opacity:.8;
+margin-left:2px;
+margin-right:1000px; 
+padding-left:20px;
+color:white;
+font-size:15px;
+padding-right:20px;
+}
+.but2
+{
+background:linear-gradient(to top,silver, grey);
+opacity:.8;
+margin-left:2px;
+margin-right:1000px; 
+padding-left:28px;
+color:white;
+font-size:15px;
+padding-right:22px;
+}
+.but3
+{
+background:linear-gradient(to top,silver, grey);
+opacity:.8;
+margin-left:2px;
+margin-right:1000px; 
+padding-left:20px;
+color:white;
+font-size:15px;
+padding-right:20px;
+}
+.but4
+{
+background:linear-gradient(to top,silver, grey);
+opacity:.8;
+margin-left:2px;
+margin-right:1000px; 
+padding-left:28px;
+color:white;
+font-size:15px;
+padding-right:22px;
+}
+

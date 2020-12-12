@@ -1,0 +1,15 @@
+h1,h2,h3{
+    font-family:"Tahoma";
+    font-style:bold;
+    text-align:left;
+    background-color: rgb(214,86,43);
+    color: rgba(255,255,255,.9);
+}
+span{
+      background-color: hsl(60,100%,25%);
+    font-family:"Times New Roman";
+}
+body
+{
+background:url(derevo.jpg);
+}
