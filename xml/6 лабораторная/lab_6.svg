@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.0" width="1000" height="500">
+<defs>
+<linearGradient id = "MyGradient">
+<stop offset = "30%" stop-color = "red"/>
+<stop offset = "70%" stop-color = "yellow"/>
+</linearGradient>
+</defs>
+<polygon points="5,135 115,5 225,135" fill="url(#MyGradient)" stroke="black" stroke-width="5" />;
+<rect x="1" y="138" width="226" height="200" fill="violet" stroke="black"  stroke-width="5"/>;
+<rect x="180" y="40" width="30" height="60" fill="red" stroke="black"  stroke-width="5" transform ="skewX(-20)"/>;
+<rect x="30" y="160" width="40" height="40" fill="aqua" stroke="brown" fill-opacity=".5" stroke-width="5"/>;
+<rect x="150" y="160" width="40" height="40" fill="aqua" stroke="brown" fill-opacity=".5" stroke-width="5"/>;
+<rect x="30" y="260" width="40" height="40" fill="aqua" stroke="brown" fill-opacity=".5" stroke-width="5"/>;
+<rect x="182" y="260" width="40" height="75" fill="aqua" stroke="black" stroke-width="6"/>;
+<line x1="33" y1="180" x2="67" y2="180" stroke="brown" stroke-width="6"/>;
+<line x1="50" y1="163" x2="50" y2="198" stroke="brown" stroke-width="6"/>;
+<line x1="153" y1="180" x2="187" y2="180" stroke="brown" stroke-width="6"/>;
+<line x1="170" y1="163" x2="170" y2="198" stroke="brown" stroke-width="6"/>;
+<line x1="33" y1="280" x2="67" y2="280" stroke="brown" stroke-width="6"/>;
+<line x1="50" y1="263" x2="50" y2="298" stroke="brown" stroke-width="6"/>;
+<circle r="3" cx="210" cy="300" fill="black" />;
+</svg>

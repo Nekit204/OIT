@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="3lab.xslt"?>
+<university >
+<spec>
+<name>БГТУ</name>
+<score>283 балла</score>
+<plan>400 человек</plan>
+<city> Брест</city>
+</spec>
+<spec>
+<name>МГУ</name>
+<score>292 балла</score>
+<plan>520 человек</plan>
+<city>Могилев</city>
+</spec>
+</university>

@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="3lab.xslt"?>
+<student>
+<information>
+<surname>Черник</surname>
+<name>Евгений</name>
+<middlename>Имя отца</middlename>
+<point>8</point>
+<year>1999</year>
+</information>
+<information>
+<surname>Уласевич</surname>
+<name>Назар</name>
+<middlename>Имя отца</middlename>
+<point>5</point>
+<year>2003</year>
+</information>
+<information>
+<surname>Мядель</surname>
+<name>Тимоха</name>
+<middlename>Имя отца</middlename>
+<point>6</point>
+<year>2000</year>
+</information>
+<information>
+<surname>Шумский</surname>
+<name>Евгений</name>
+<middlename>Имя отца</middlename>
+<point>5</point>
+<year>2003</year>
+</information>
+<information>
+<surname>Ивашков</surname>
+<name>Макар</name>
+<middlename>Имя отца</middlename>
+<point>10</point>
+<year>2004</year>
+</information>
+</student>

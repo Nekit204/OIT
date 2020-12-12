@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<head>
+</head>
+<body>
+<svg width="7=1000" height="700">
+<style>
+.heart1
+{
+fill:url(#MyGradient1);
+stroke:pink;
+stroke-width:6;
+}
+.heart2
+{
+fill:url(#MyGradient2);
+stroke:black;
+stroke-width:4;
+}
+.heart3
+{
+fill:aqua;
+stroke:white;
+stroke-width:5;
+}
+.heart4
+{
+fill:orange;
+fill-opacity:.5;
+stroke:orange;
+stroke-dasharray:6 8;
+stroke-width:4;
+}
+.heart5
+{
+fill:brown;
+stroke:yellow;
+stroke-opacity:.5;
+stroke-width:15;
+}
+</style>
+<defs>
+<radialGradient id = "MyGradient1">
+<stop offset = "50%" stop-color = "red"/>
+<stop offset = "50%" stop-color = "yellow"/>
+</radialGradient>
+</defs>
+<defs>
+<linearGradient id = "MyGradient2">
+<stop offset = "50%" stop-color = "black"/>
+<stop offset = "50%" stop-color = "lime"/>
+</linearGradient>
+</defs>
+<defs>
+<path id="heart" d="M100 34.976c0 8.434-3.635 16.019-9.423 21.274h0.048l-31.25 31.25c-3.125 3.125-6.25 6.25-9.375 6.25s-6.25-3.125-9.375-6.25l-31.202-31.25c-5.788-5.255-9.423-12.84-9.423-21.274 0-15.865 12.861-28.726 28.726-28.726 8.434 0 16.019 3.635 21.274 9.423 5.255-5.788 12.84-9.423 21.274-9.423 15.865 0 28.726 12.861 28.726 28.726z"/>
+</defs>
+<use xlink:href="#heart" class="heart1" x="30" y="20" transform="rotate(35 36 26)"/>
+<use xlink:href="#heart" class="heart2" x="150" y="20" transform="skewX(-25)"/>
+<use xlink:href="#heart" class="heart3" x="270" y="20" transform="skewY(15)"/>
+<use xlink:href="#heart" class="heart4" x="210" y="10" transform="scale(2)"/>
+<use xlink:href="#heart" class="heart5" x="450" y="50" transform="scale(0.6)"/>
+</svg>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#txt{
+stroke:black;
+stroke-width:1;
+fill:red;
+font-size:30px;
+font-family: monospace;
+}
+#txt2{
+stroke:black;
+stroke-width:1;
+fill:orange;
+font-size:50px;
+font-style: oblique;
+text-shadow: 1px 1px 2px black, 0 0 1em red; 
+}
+svg
+{
+background:#FAFAD2;
+}
+</style>
+</head>
+<body>
+<img src="lip.svg">
+<img width="600" height="600"  src="text.svg">
+<h1 align="left">Текст</h1>
+<svg width="500" height="400">
+<defs>
+<path id="textpath" fill="none" stroke="red" stroke-width="2" d="M0.057,0.024c0,0,10.99,51.603,102.248,51.603c91.259,0,136.172,53.992,136.172,53.992"/> 
+</defs>
+<text x="50" y="350" rotate="30" textLength="250" id="txt" id="an">Лабораторная</text>
+<text><tspan id="txt2" x="-25" y="150" dx="60" dy="90" rotate="-30">Апельсин</tspan></text>
+<use xlink:href="#textpath"/>  
+<text x="30" y="50" font-size="20px">  
+<textPath xlink:href="#textpath">  
+Этот текст идет по линии.
+</textPath>  
+</text>
+<animate xlink:href="#txt" attributeName="fill" values="red;orange;yellow;green;blue;navy;purple" dur="6s" repeatCount="indefinite" />
+<animate xlink:href="#txt" attributeName="font-size" values="30px;40px;50px;60px;70px;70px;60px;50px;40px;30px" dur="4s" repeatCount="indefinite"/>
+</svg>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<head>
+<title>lab5</title>
+<script>
+function processFiles(files)
+{
+let fil=files[0];
+let reader=new FileReader();
+reader.readAsText(fil);
+reader.onload=function()
+{
+let parser=new DOMParser();
+let xmlDOC=parser.parseFromString(reader.result,"text/xml");
+let str=xmlDOC.getElementsByTagName("information")[0];
+document.getElementById("text").innerHTML="ПОИТ-5";
+document.getElementById("text").innerHTML+="<br>";
+for(let i=0;i<str.childElementCount;i++)
+{
+document.getElementById("text").innerHTML=document.getElementById("text").innerHTML + str.children[i].textContent + "<br>"; 
+}
+document.getElementById("text").style.width="300px";
+}
+}
+</script>
+</head>
+<body>
+<input type="file" onchange="processFiles(this.files)" multiple>
+<div id="text"></div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<head>
+</head>
+<body>
+<svg width="1000" height="700">
+<style>
+</style>
+<circle r="30" cx="100" cy="100" id="circ" fill="pink" stroke="red" stroke-width="3"/>;
+<animate xlink:href="#circ" attributeName="cx" values="20%;70%;10%" dur="2s"/>
+<animate xlink:href="#circ" attributeName="fill" values="pink;yellow;pink" dur="2s"/>
+<animate xlink:href="#circ" attributeName="r" values="30;20;10;20;30" dur="2s"/>
+<animate xlink:href="#circ" attributeName="stroke-width" values="3;5;12;5;3" dur="2s" begin="2s"/>
+<defs>
+<path id="heart" d="M100 34.976c0 8.434-3.635 16.019-9.423 21.274h0.048l-31.25 31.25c-3.125 3.125-6.25 6.25-9.375 6.25s-6.25-3.125-9.375-6.25l-31.202-31.25c-5.788-5.255-9.423-12.84-9.423-21.274 0-15.865 12.861-28.726 28.726-28.726 8.434 0 16.019 3.635 21.274 9.423 5.255-5.788 12.84-9.423 21.274-9.423 15.865 0 28.726 12.861 28.726 28.726z"/>
+</defs>
+<use xlink:href="#heart" id="heart1" x="50" y="180" stroke="red" stroke-width="3" fill="pink" />
+<animateTransform xlink:href="#heart1" attributeName="transform" type="scale" values="1;1.2;1" dur="1s" repeatCount="indefinite"/ >
+<circle r="30" cx="100" cy="100" id="circ" fill="pink" stroke="red" stroke-width="10" />;
+<animate xlink:href="#circ" attributeName="stroke-dasharray" values="40;10;0" dur="2s" begin="mouseover"/>
+<animate xlink:href="#circ" attributeName="stroke-width" values="0;10" dur="2s" begin="mouseover"/>
+<animate xlink:href="#circ" attributeName="stroke-dashoffset" values="30;10;60" dur="2s" begin="mouseover"/>
+</svg>
+</body>
+</html>
