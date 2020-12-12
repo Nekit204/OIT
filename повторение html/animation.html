@@ -1,0 +1,86 @@
+<!doctype html>
+<meta charset utf-8>
+<head>
+<style>
+.firstElement
+{
+background-color:lime;
+margin-left:400px;
+margin-right:600px;
+margin-top:200px;
+width:700px;
+height:300px;
+
+}
+.firstElement:hover .kill
+{
+
+animation:anim2 5s;
+
+}
+.firstElement:hover .block3
+{
+
+
+animation:anim3 5s;
+}
+@keyframes anim 
+{
+30%{margin-left:600px;}
+40%{margin-left:300px;}
+30%{margin-left:600px;}
+}
+#wrap1
+{
+position:absolute;
+animation:anim 5s 10;
+animation-timing-function: linear;
+animation-fill-mode: forwards;
+background-color:red;
+margin-top:200px;
+margin-left:500px;
+width:100px;
+height:100px;
+}
+@keyframes anim2
+{
+ from {
+  background-color:orange; 
+ }
+ to {
+  background-color:aqua;
+ }
+}
+.kill
+{
+background-color:orange;
+width:100px;
+height:50px;
+}
+.block3
+{
+background-color:black;
+margin-left:300px;
+margin-top:50px;
+width:50px;
+height:50px;
+}
+@keyframes anim3
+{
+ from {
+  width:50px;height:50px;
+ }
+ to {
+ width:200px;height:100px;
+ }
+}
+</style>
+</head>
+<body>
+<div class="firstElement">
+<div id="wrap1"></div>
+<div class="kill"></div>
+<div class="block3"></div>
+</div>
+</body>
+</html>
