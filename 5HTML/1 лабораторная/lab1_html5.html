@@ -1,0 +1,78 @@
+<html>
+<head>
+<style>
+mark{
+background:pink;
+padding:0 3px;
+border: 3px dotted red;
+}
+</style>
+</head>
+<body>
+<h1 align="center">Тег MARK</h1>
+<h1 align="center"><mark>Я,Закервашевич Никита Русланович,изучаю HTML5</mark></h1>
+<br>
+<h1>Аудио</h1>
+<audio src="Obla.ogv" controls="controls"> </audio>
+<br>
+<h1>Видео</h1>
+<video src="Obla.ogv" width="150" height="300" controls="controls"></video>
+<br>
+<h1>Координаты</h1>
+<h3>Для считывания координат нажмите на кнопку</h3>
+<input type="button" value=" Координаты" onclick = "getCoordinates()">
+<br>
+<h1>Canvas</h1>
+<canvas id='draw' width='1000' height='1000'></canvas>
+<script>
+function getCoordinates() {
+navigator.geolocation.getCurrentPosition(showCoordinates);
+}
+function showCoordinates(position) {
+document.write("Широта:" + position.coords.latitude + "<br/>");
+document.write("Долгота:" + position.coords.longitude+"<br/>"); 
+document.write("Скорость:" + position.coords.speed+"<br/>"); 
+document.write("Точность определения широты и долготы:" + position.coords.accuracy+"<br/>"); 
+}
+
+var canvas = document.getElementById('draw');
+var x=canvas.getContext('2d');
+var grad =x.createLinearGradient(0,0,0,150);
+grad.addColorStop(0.0,'pink');
+grad.addColorStop(0.3,'purple');
+grad.addColorStop(0.6,'yellow');
+grad.addColorStop(0.9,'red');
+x.fillStyle = "red";
+x.beginPath();
+x.fillRect(40,80,100,100);
+x.closePath();
+x.fill();
+x.fillStyle = "orange";
+x.beginPath();
+x.moveTo(40,80);
+x.lineTo(90,20);
+x.lineTo(140,80);
+x.closePath();
+x.fill();
+x.fillStyle = "blue";
+x.beginPath();
+x.shadowColor = "black";
+x.shadowBlur = 20;
+x.shadowOffsetX = 15;
+x.shadowOffsetY = 15;
+x.fillRect(55,95,30,30)
+x.fillRect(95,95,30,30)
+x.fillRect(55,135,30,30)
+x.closePath();
+x.fill();
+x.fillStyle=grad;
+x.beginPath();
+x.fillRect(100,15,20,55);
+x.closePath();
+x.fill();
+x.font='15px Verdana';
+x.fillStyle='#60016d';
+x.fillText("Закервашевич Н.Р.", 10, 200);
+</script>
+</body>
+</html>

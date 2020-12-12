@@ -1,0 +1,70 @@
+<html>
+<head>
+<body>
+<canvas id='draw' width='1000' height='1000'></canvas>
+<script>
+var canvas = document.getElementById('draw');
+var x=canvas.getContext('2d');
+
+x.font='15px Verdana';
+x.shadowBlur=5;
+x.shadowOffsetX=7;
+x.shadowOffsetY=7;
+x.fillStyle='#60016d';
+x.fillText("Диаграмма МОЙ ДЕНЬ", 100, 50);
+
+
+x.beginPath();
+x.lineWidth = 20;
+x.strokeStyle = 'aqua';
+x.arc(100,195,80,0,2*Math.PI);
+x.stroke();
+x.closePath();
+
+function drawSector(x,centerX, centerY, radius, startAngle, endAngle, color ){
+x.fillStyle = color;
+x.beginPath();
+x.moveTo(centerX,centerY);
+x.arc(centerX, centerY, radius, startAngle, endAngle);
+x.closePath();
+x.fill();
+}
+drawSector(x, 100,195,70, Math.PI, Math.PI + Math.PI/3, '#ff0000');
+drawSector(x, 100,195,70, 4*Math.PI/3, 2*Math.PI/3 - 2*Math.PI/3, 'pink');
+drawSector(x, 100,195,70, 2*Math.PI, 2*Math.PI + Math.PI/6, 'blue');
+drawSector(x, 100,195,70, 13*Math.PI/6, Math.PI, 'purple');
+
+x.beginPath();
+x.fillStyle="purple";
+x.fillRect(250,130,10,10);
+x.fill();
+x.fillStyle="blue";
+x.fillRect(250,160,10,10);
+x.fill();
+x.fillStyle="red";
+x.fillRect(250,190,10,10);
+x.fill();
+x.fillStyle="pink";
+x.fillRect(250,220,10,10);
+x.fill();
+x.closePath();
+
+x.font='15px Verdana';
+x.fillStyle='purple';
+x.fillText("Сон", 270, 140);
+
+x.font='15px Verdana';
+x.fillStyle='blue';
+x.fillText("Дорога", 270, 170);
+
+x.font='15px Verdana';
+x.fillStyle='red';
+x.fillText("Университет", 270, 200);
+
+x.font='15px Verdana';
+x.fillStyle='pink';
+x.fillText("Остальное", 270, 230);
+</script>
+</body>
+</head>
+</html>

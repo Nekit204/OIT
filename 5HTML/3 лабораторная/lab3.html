@@ -1,0 +1,54 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>lab3</title>
+</head> 
+<body>
+<header>
+<h1>Лабораторная работа 3</h1>
+</header>
+<form name="fit" oninput="o.value = parseInt(a.value) + parseInt(b.value)">
+<fieldset>|
+<input type='search'name='srch' value='Введите для поиска'>
+<br>
+<br>
+<input type='email'name='email' value='petrovfc@gmail.ru'>
+<br>
+<br>
+<input type='tel'name='cellphone' value='+375296543452'>
+<br>
+<input type='range' min="10" max="100" name='range' value='range'>
+<br>
+<input type='color'name='cl' value='color'>
+<input list="character">
+<datalist id="character">
+<option value="Один"></option>
+<option value="Два"></option>
+<option value="Три"></option>
+</datalist>
+<br>
+<br>
+<input name="a" type="number" step="any"> +
+<input name="b" type="number" step="any"> =
+<output name="o"></output>
+</fieldset>
+</form>
+<nav>
+<figure>
+<img src="gcl.png" width="100" height="100">
+<figcaption>Джигглипуф</figcaption>
+</figure>
+</nav>
+<form oninput="tl.value = cellphone.value +':'+email.value" >
+<input type='tel'id='cellphone'>
+<input type='email'id='email'>
+<br>
+<footer>
+Закервашевич Никита 5-ФИТ 1 курс
+<br>
+Телефон:Email:<output name="tl" for="cellphone email"></output>
+</footer>
+</form>
+
+</body> 
+</html>

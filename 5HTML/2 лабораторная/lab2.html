@@ -1,0 +1,70 @@
+<html>
+<head>
+<body>
+<canvas id='draw' width='1000' height='1000'></canvas>
+<script>
+var canvas = document.getElementById('draw');
+var x=canvas.getContext('2d');
+
+x.beginPath();
+x.lineWidth = 2;
+x.strokeStyle = 'black';
+x.moveTo(100, 10);
+x.lineTo(100, 300);
+x.lineTo(400, 300);
+x.stroke();
+x.closePath();
+
+var grad =x.createLinearGradient(130,219,450,319);
+grad.addColorStop(0.0,'pink');
+grad.addColorStop(0.3,'purple');
+grad.addColorStop(0.6,'yellow');
+grad.addColorStop(0.9,'silver');
+
+
+x.beginPath();
+x.fillStyle=grad;
+x.fillRect(130,219,50,80);
+x.fill();
+x.closePath();
+
+var img = new Image();
+img.src = 'space.jfif';
+img.onload = function() {
+var pattern = x.createPattern(img, 'repeat');
+x.beginPath();
+x.fillStyle=pattern;
+x.fillRect(210,119,50,180);
+x.fill();
+x.closePath();
+}
+
+x.beginPath();
+x.fillStyle="red";
+x.fillRect(290,269,50,30);
+x.fill();
+x.closePath();
+
+x.font='15px Verdana';
+x.fillStyle='#60016d';
+x.fillText("Годы", 10, 200);
+x.fillText("3", 80, 250);
+x.fillText("6", 80, 200);
+x.fillText("9", 80, 150);
+x.fillText("12", 77, 100);
+x.fillText("Учебное заведение", 180, 350);
+
+x.font='9px Oblique';
+x.fillStyle='green';
+x.fillText("Детский сад", 130, 310);
+
+x.font='9px Oblique';
+x.fillStyle='purple';
+x.fillText("Школа", 222, 311);
+
+x.font='9px Oblique';
+x.fillStyle='red';
+x.fillText("Университет", 290, 311);
+</script>
+</body>
+</html>
